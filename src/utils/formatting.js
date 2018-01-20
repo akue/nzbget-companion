@@ -6,7 +6,7 @@ export function formatRate(bytesPerSec) {
 	if (bytesPerSec >= 1048576)
 		return round(bytesPerSec / 1024 / 1024) + ' MB/s';
 	else if (bytesPerSec >= 1024)
-		return round(bytesPerSec / 1024) + ' KB/s';
+		return Math.round(bytesPerSec / 1024) + ' KB/s';
 	else
 		return bytesPerSec + ' B/s';
 }

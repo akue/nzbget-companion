@@ -18,7 +18,7 @@
 				if (this.toggleBusy) return;
 				this.toggleBusy = true;
 				this.$store.dispatch('setFooter',
-					`Requested download ${this.group.Status === 'PAUSED' ? 'resume' : 'pause'}, please wait...`);
+					`Sent download ${this.group.Status === 'PAUSED' ? 'resume' : 'pause'} request, please wait...`);
 				sendMessage({ type: 'toggleGroupStatus', group: this.group })
 					.finally(() => this.toggleBusy = false);
 			}
@@ -60,6 +60,7 @@
 		margin-bottom: 0.25rem;
 		padding: 0.25rem;
 		border: 1px solid black;
+		background: white;
 	}
 
 	.group > .groupTitle {
@@ -67,7 +68,7 @@
 		display: flex;
 	}
 
-	.group > .groupName {
+	.group .groupName {
 		flex-grow: 1;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -75,7 +76,7 @@
 		line-height: 18px;
 	}
 
-	.group > .groupStatus {
+	.group .groupStatus {
 		display: inline-block;
 		font-weight: bold;
 		border-radius: 5px;

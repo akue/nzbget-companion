@@ -34,8 +34,7 @@
 	<div class="historicGroup"
 		 :class="group.Status.replace(/\/.+$/, '')">
 
-		<div class="groupTitle"></div>
-
+		<div class="groupTitle">
 			
 			<div class="groupStatus">
 				<small>{{group.Status}}</small>
@@ -48,7 +47,7 @@
 
 			<div class="groupName"
 				 :title="group.Name">
-				{{group.Name.replace(/\./g, ' ')}}
+				 {{group.Name.replace(/\./g, ' ')}}
 			</div>
 
 			<div class="groupStats"
@@ -78,6 +77,7 @@
 	.historicGroup {
 		border: 1px solid black;
 		border-radius: 3px;
+		background: white;
 	}
 
 	.historicGroup.SUCCESS {
@@ -95,17 +95,21 @@
 		padding: 1px 4px 2px;
 		color: white;
 		margin: 0.25rem 0 0 0.25rem;
+		vertical-align: bottom;
 	}
 
 	.historicGroup .groupDate {
 		float: right;
 		margin: 0.25rem 0.25rem 0 0;
+		line-height: 1.4rem;
 	}
 
 	.historicGroup .groupName {
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
+		border-top: 1px dashed #bbb;
+		margin-top: 0.25rem;
 		margin-left: 0.25rem;
 		padding-top: 0.25rem;
 		padding-bottom: 0.25rem;

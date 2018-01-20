@@ -175,7 +175,7 @@
 
 	#speedText {
 		margin-left: 5px;
-		width: 50px;
+		width: 60px;
 	}
 
 	#etaContainer {

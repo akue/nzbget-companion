@@ -1,4 +1,5 @@
 <script>
+	// TODO Remove ProgressBar.js dependency
 	import ProgressBar from 'progressbar.js';
 	import { formatDuration, formatSize } from '../../utils/formatting';
 
@@ -57,6 +58,7 @@
 		width: 100%;
 		height: 20px;
 		outline: 1px solid black;
+		background: white;
 	}
 
 	.progress > svg {

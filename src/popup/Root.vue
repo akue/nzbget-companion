@@ -16,6 +16,7 @@
 		},
 
 		computed: mapState([
+			'status',
 			'footer',
 			'showingLogs',
 			'showingHistory'
@@ -48,7 +49,7 @@
 			limitSpeed(kbPerSec) {
 				kbPerSec = parseInt(kbPerSec, 10);
 				if (isNaN(kbPerSec) || kbPerSec < 0) return;
-				this.$store.dispatch('setFooter', 'Requested speed limit change, please wait...');
+				this.$store.dispatch('setFooter', 'Sent speed limit change request, please wait...');
 				sendMessage({ type: 'limitSpeed', speed: kbPerSec });
 			},
 
@@ -56,7 +57,7 @@
 				if (this.statusBusy) return;
 				this.statusBusy = true;
 				this.$store.dispatch('setFooter',
-					`Requested ${this.status.DownloadPaused ? 'resume' : 'pause'}, please wait...`);
+					`Sent ${this.status.DownloadPaused ? 'resume' : 'pause'} request, please wait...`);
 				sendMessage({ type: 'togglePause' })
 					.finally(() => this.statusBusy = false);
 			},
@@ -112,6 +113,10 @@
 		padding: 0;
 		margin: 0;
 		overflow-y: hidden;
+		background: white;
+	}
+
+	#container {
 		background: white;
 	}
 

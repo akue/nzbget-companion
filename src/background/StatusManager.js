@@ -172,7 +172,7 @@ export default class StatusManager
 			console.error('Could not deduce filename', e);
 		}
 
-		return `NZBGet.Companion.${new Date().toISOString()}.nzb`;
+		return `NZBGet.Companion.Grab.${new Date().toISOString()}.nzb`;
 
 	}
 

@@ -26,6 +26,15 @@
 			</div>
 		</article>
 
+		<article class="message is-small is-danger">
+			<div class="message-header">
+				<p>Warning</p>
+			</div>
+			<div class="message-body">
+				This is very much a beta feature, it may not work at all.
+			</div>
+		</article>
+
 		<div class="field no-margin">
 			<div class="field-body">
 				<div class="field">
