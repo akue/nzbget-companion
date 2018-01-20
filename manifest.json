@@ -1,0 +1,39 @@
+{
+
+   "name": "NZBGet Companion",
+   "version": "1.0",
+   "manifest_version": 2,
+
+   "background": {
+      "page": "public/background.html"
+   },
+
+   "icons": {
+      "16": "assets/icon_working.ico"
+   },
+
+   "browser_action": {
+       "browser_style": false,
+       "default_icon": {
+          "16": "assets/icon_idle.ico"
+       },
+       "default_title": "NZBGet Companion",
+       "default_popup": "public/popup.html"
+   },
+
+   "permissions": [
+	   "notifications",
+	   "tabs",
+	   "webNavigation",
+	   "http://*/",
+	   "https://*/"
+   ],
+
+	"applications": {
+		"gecko": {
+			"id": "nzbgetCompanion@akue.github.com",
+			"strict_min_version": "57.0"
+		}
+	}
+
+}
