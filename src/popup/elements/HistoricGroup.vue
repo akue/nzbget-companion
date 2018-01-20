@@ -76,8 +76,7 @@
 <style>
 	.historicGroup {
 		border: 1px solid black;
-		border-radius: 3px;
-		background: white;
+		border-radius: 3px
 	}
 
 	.historicGroup.SUCCESS {
@@ -93,7 +92,6 @@
 		font-weight: bold;
 		border-radius: 3px;
 		padding: 1px 4px 2px;
-		color: white;
 		margin: 0.25rem 0 0 0.25rem;
 		vertical-align: bottom;
 	}

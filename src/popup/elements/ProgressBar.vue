@@ -1,6 +1,4 @@
 <script>
-	// TODO Remove ProgressBar.js dependency
-	import ProgressBar from 'progressbar.js';
 	import { formatDuration, formatSize } from '../../utils/formatting';
 
 	export default {
@@ -21,36 +19,32 @@
 				return `${formatSize(downloaded, true)} / ${formatSize(total, true)}`;
 			},
 
-			updateProgress() {
+			updateBar() {
 				const percentage = 1 - this.group.RemainingSizeMB / this.group.FileSizeMB;
-				this.$progress.setText(this.getLabel());
-				this.$progress.animate(percentage);
-				this.$progress.path.setAttribute('stroke', this.getColor());
+				this.$refs.label.textContent = this.getLabel();
+				this.$refs.bar.style.width = (percentage * 100) + '%';
+				this.$refs.bar.style.backgroundColor = this.getColor();
 			}
 
 		},
 
 		watch: {
-			'group.RemainingSizeMB': function() { this.updateProgress(); },
-			'group.Status': function() { this.updateProgress(); }
+			'group.RemainingSizeMB': function() { this.updateBar(); },
+			'group.Status': function() { this.updateBar(); }
 		},
 
 		mounted() {
-			this.$progress = new ProgressBar.Line(this.$el, {
-				color: '#76c479',
-				duration: 1000,
-				easing: 'easeInOut',
-				strokeWidth: 6,
-				text: { className: 'progressLabel' }
-			});
-			this.updateProgress();
+			this.updateBar();
 		}
 
 	}
 </script>
 
 <template>
-	<div class="progress"></div>
+	<div class="progress">
+		<div class="progressBar" ref="bar"></div>
+		<div class="progressLabel" ref="label"></div>
+	</div>
 </template>
 
 <style>
@@ -58,14 +52,24 @@
 		width: 100%;
 		height: 20px;
 		outline: 1px solid black;
-		background: white;
+		position: relative;
 	}
 
-	.progress > svg {
+	.progressBar {
+		position: absolute;
+		top: 0;
+		left: 0;
 		height: 100%;
+		width: 0;
+		background-color: #76c479;
+		transition: width 0.25s ease-in-out, background-color 0.5s linear;
 	}
 
 	.progressLabel {
 		color: black !important;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 </style>

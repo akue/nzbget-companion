@@ -60,7 +60,6 @@
 		margin-bottom: 0.25rem;
 		padding: 0.25rem;
 		border: 1px solid black;
-		background: white;
 	}
 
 	.group > .groupTitle {

@@ -113,18 +113,12 @@
 		padding: 0;
 		margin: 0;
 		overflow-y: hidden;
-		background: white;
-	}
-
-	#container {
-		background: white;
 	}
 
 	#body {
 		margin: 0.5rem;
 		max-height: 340px;
 		overflow-y: auto;
-		background: white;
 	}
 
 	#footer {
@@ -154,4 +148,8 @@
 		color: #a94442;
 	}
 
+	/* Fix for https://bugzilla.mozilla.org/show_bug.cgi?id=1418677 */
+	* {
+		background-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==);
+	}
 </style>

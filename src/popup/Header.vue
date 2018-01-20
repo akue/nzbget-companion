@@ -231,6 +231,7 @@
 		margin-left: 5px;
 		margin-right: 5px;
 		-moz-appearance: textfield;
+		border: none;
 	}
 
 	#speedControl > input::-webkit-outer-spin-button,

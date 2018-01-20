@@ -67,10 +67,6 @@
 		vertical-align: bottom;
 	}
 
-	#logs {
-		background: white;
-	}
-
 	.log {
 		border: 1px solid black;
 		padding: 0.25rem;
