@@ -14,9 +14,9 @@ Vue.use(ResourcePlugin);
 Vue.directive('icons', iconsDirective);
 
 new Vue({
-    el: '#app',
+	el: '#app',
 	store: new Vuex.Store(store),
-    render: h => h(Root)
+	render: h => h(Root)
 });
 
 // Prevents Firefox's bfcache from caching the page

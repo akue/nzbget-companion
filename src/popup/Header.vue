@@ -379,17 +379,17 @@
 	  ----------*/
 
 	@-webkit-keyframes rotation {
-		0%   { -webkit-transform: rotate(0); }
+		0% { -webkit-transform: rotate(0); }
 		100% { -webkit-transform: rotate(360deg); }
 	}
 
 	@-moz-keyframes rotation {
-		0%   { -moz-transform: rotate(0); }
+		0% { -moz-transform: rotate(0); }
 		100% { -moz-transform: rotate(360deg); }
 	}
 
 	@-ms-keyframes rotation {
-		0%   { -ms-transform: rotate(0); }
+		0% { -ms-transform: rotate(0); }
 		100% { -ms-transform: rotate(360deg); }
 	}
 

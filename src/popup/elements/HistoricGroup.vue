@@ -32,9 +32,9 @@
 
 <template>
 	<div class="historicGroup"
-	     :class="group.Status.replace(/\/.+$/, '')">
+		 :class="group.Status.replace(/\/.+$/, '')">
 
-		<div class="groupTitle">
+		<div class="groupTitle"></div>
 
 			
 			<div class="groupStatus">
